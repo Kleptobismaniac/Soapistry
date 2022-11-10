@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "soapistry",
+  "version": "${version}",
+
+  "name": "Soapistry",
+  "description": "Adds soap and soapification-like things",
+  "authors": [
+    "Kleptobismaniac"
+  ],
+  "contact": {
+    "homepage": "https://instagram.com/Kleptobismaniac",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/soapistry/icon/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "klepto.soapistry.Soapistry"
+    ],
+    "client":[
+      "klepto.soapistry.SoapistryClient"
+    ]
+  },
+  "mixins": [
+    "soapistry.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
