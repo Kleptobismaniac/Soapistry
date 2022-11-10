@@ -1,9 +1,11 @@
-# Fabric Example Mod
+# Soapistry
 
-## Setup
+## Description
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Adds soap and soapification-like things including (but not limited to) soap, bottled fat, lye, ash, and various other soap-related materials!
 
-## License
+## Contact
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+[Instagram](https://instagram.com/Kleptobismaniac)
+
+[Mod Page](https://www.curseforge.com/minecraft/mc-mods/soapistry)
