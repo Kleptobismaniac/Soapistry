@@ -6,8 +6,8 @@ Adds soap and soapification-like things including, but not limited to, bottled f
 
 ## Contact
 
-Email: sheldons210@gmail.com
-
 [Instagram](https://instagram.com/Kleptobismaniac)
+
+[Email](sheldons210@gmail.com)
 
 [Mod Page](https://www.curseforge.com/minecraft/mc-mods/soapistry)
