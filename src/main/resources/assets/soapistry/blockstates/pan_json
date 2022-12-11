@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "soapistry:block/pan"
+    },
+    "facing=south": {
+      "model": "soapistry:block/pan",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "soapistry:block/pan",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "soapistry:block/pan",
+      "y": 90
+    }
+  }
+}

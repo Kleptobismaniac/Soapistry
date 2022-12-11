@@ -6,7 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "SoapistryMixin"
+
+
+ 
   ],
   "injectors": {
     "defaultRequire": 1
