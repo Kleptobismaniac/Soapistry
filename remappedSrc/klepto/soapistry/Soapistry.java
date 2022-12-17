@@ -4,7 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//import klepto.soapistry.block.ModBlocks;
+import klepto.soapistry.block.ModBlocks;
 import klepto.soapistry.item.ModItems;
 
 public class Soapistry implements ModInitializer {
@@ -15,7 +15,7 @@ public class Soapistry implements ModInitializer {
 	public void onInitialize() {
 		
 		ModItems.registerModItems();
-		//ModBlocks.registerModBlocks();
+		ModBlocks.registerModBlocks();
 
 		System.out.println("THIS MOD IS WORKING");
 

@@ -1,4 +1,4 @@
-/*package klepto.soapistry.block.entity;
+package klepto.soapistry.block.entity;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -63,4 +63,3 @@ public class PanBlockEntity extends BlockEntity implements ImplementedInventory{
         Inventories.writeNbt(nbt,inventory);
     }
 }
-*/
