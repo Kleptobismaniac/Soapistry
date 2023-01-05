@@ -1,6 +1,7 @@
 package klepto.soapistry.mixin.glass_bottle;
 
 import klepto.soapistry.item.ModItems;
+import net.fabricmc.fabric.impl.transfer.item.CursorSlotWrapper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
@@ -31,6 +32,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(GlassBottleItem.class)
 public class GlassBottleMixin extends Item implements GlassBottleAccessor{
 
+    private int timesClicked;
+
 
     public GlassBottleMixin(Settings settings) {
         super(settings);
@@ -38,12 +41,35 @@ public class GlassBottleMixin extends Item implements GlassBottleAccessor{
 
     @Override
     public boolean onStackClicked(ItemStack stack, Slot slot, ClickType clickType, PlayerEntity player){
+        stack = slot.getStack();
+        if(timesClicked < 3){
+            if (clickType != ClickType.RIGHT){
+                return false;
+            } else {
+                if (stack.isOf(Items.COOKED_BEEF)) {
+                    player.giveItemStack(ModItems.BOTTLE_OF_FAT.getDefaultStack());
+                    System.out.println("THIS WORKS");
+                    timesClicked++;
+                    return true;
+                }
+            } 
+        } else if (timesClicked == 3){
+            stack.decrement(1);
+            player.giveItemStack(Items.BONE.getDefaultStack());
+            timesClicked = 0;
+            System.out.println("BOO");
+        }
+        return false;
+    }
+
+    /*@Override
+    public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
         if (clickType != ClickType.RIGHT){
             return false;
         } else {
             if (slot.getStack().isOf(Items.COOKED_BEEF) && slot.getStack().isEmpty()) {
                     //slot.setStack(new ItemStack(Items.BONE));
-                    //cursorStackReference.set(new ItemStack(ModItems.BOTTLE_OF_FAT));
+                    cursorStackReference.set(new ItemStack(ModItems.BOTTLE_OF_FAT));
                     player.giveItemStack(Items.BONE.getDefaultStack());
                     System.out.println("THIS WORKS");
                     
@@ -53,7 +79,7 @@ public class GlassBottleMixin extends Item implements GlassBottleAccessor{
         return true;
         
 
-    }
+    }*/
     
 
     /*@Inject(method = "use", at = @At("HEAD"))

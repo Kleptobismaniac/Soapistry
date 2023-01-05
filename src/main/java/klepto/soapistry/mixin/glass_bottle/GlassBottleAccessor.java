@@ -20,5 +20,7 @@ public interface GlassBottleAccessor {
     @Invoker("onStackClicked")
     public boolean onStackClicked(ItemStack stack, Slot slot, ClickType clickType, PlayerEntity player);
 
-
+    @Invoker("onClicked")
+    public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference);
+        
 }
