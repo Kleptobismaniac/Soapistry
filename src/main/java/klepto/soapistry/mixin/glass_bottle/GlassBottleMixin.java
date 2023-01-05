@@ -41,20 +41,22 @@ public class GlassBottleMixin extends Item implements GlassBottleAccessor{
 
     @Override
     public boolean onStackClicked(ItemStack stack, Slot slot, ClickType clickType, PlayerEntity player){
-        stack = slot.getStack();
+        ItemStack itemStack = slot.getStack();
         if(timesClicked < 3){
             if (clickType != ClickType.RIGHT){
                 return false;
             } else {
-                if (stack.isOf(Items.COOKED_BEEF)) {
+                if (itemStack.isOf(Items.COOKED_BEEF)) {
                     player.giveItemStack(ModItems.BOTTLE_OF_FAT.getDefaultStack());
+                    stack.decrement(1);
                     System.out.println("THIS WORKS");
                     timesClicked++;
                     return true;
                 }
             } 
         } else if (timesClicked == 3){
-            stack.decrement(1);
+            player.giveItemStack(ModItems.BOTTLE_OF_FAT.getDefaultStack());
+            itemStack.decrement(1);
             player.giveItemStack(Items.BONE.getDefaultStack());
             timesClicked = 0;
             System.out.println("BOO");
