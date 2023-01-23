@@ -4,6 +4,7 @@
     "item.soapistry.lye": "Lye",
     "item.soapistry.bottle_of_fat": "Bottle of Fat",
     "block.soapistry.pan": "Frying Pan",
+    "effect.soapistry.slippery": "Slippery",
 
     "itemGroup.soapistry.soap": "Soapistry"
 }
