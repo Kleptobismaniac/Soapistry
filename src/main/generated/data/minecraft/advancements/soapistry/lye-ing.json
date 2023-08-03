@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:soapistry/root",
+  "criteria": {
+    "lye-ing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soapistry:lye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
+    "description": {
+      "text": "Create lye for the first time"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "soapistry:lye"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Lye-ing Wait"
+    }
+  },
+  "requirements": [
+    [
+      "lye-ing"
+    ]
+  ]
+}

@@ -1,5 +1,6 @@
 {
 	"type": "minecraft:crafting_shapeless",
+    "group": "ash",
 	"ingredients": [{
 			"item": "minecraft:water_bucket"
 		},
@@ -12,3 +13,4 @@
 		"count": 3
 	}
 }
+

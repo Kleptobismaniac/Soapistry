@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:soapistry/root",
+  "criteria": {
+    "fatty": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soapistry:bottle_of_fat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
+    "description": {
+      "text": "Obtain a bottle of fat for the first time"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "soapistry:bottle_of_fat"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Fat of the Land"
+    }
+  },
+  "requirements": [
+    [
+      "fatty"
+    ]
+  ]
+}

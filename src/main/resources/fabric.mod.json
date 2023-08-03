@@ -23,6 +23,9 @@
     ],
     "client":[
       "klepto.soapistry.SoapistryClient"
+    ],
+    "fabric-datagen": [
+      "klepto.soapistry.dataGeneration.DataGeneration"
     ]
   },
   "mixins": [

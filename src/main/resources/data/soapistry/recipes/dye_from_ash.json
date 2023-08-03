@@ -1,15 +1,16 @@
 {
     "type": "minecraft:crafting_shapeless",
+    "group": "black_dye",
     "ingredients": [
         {
-            "item": "minecraft:water_bucket"
+            "item": "minecraft:bone_meal"
         },
         {
             "item": "soapistry:ash"
         }
     ],
     "result": {
-        "item": "soapistry:lye",
-        "count": 1
+        "item": "minecraft:black_dye",
+        "count": 2
     }
 }

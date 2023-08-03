@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "got_soap": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soapistry:soap"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "text": "Craft a bar of soap for the first time"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "soapistry:soap"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Soap Making 101"
+    }
+  },
+  "requirements": [
+    [
+      "got_soap"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:soapistry/root",
+  "criteria": {
+    "ashy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "soapistry:ash"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
+    "description": {
+      "text": "Obtain ash for the first time"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "soapistry:ash"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Ash to Ashes"
+    }
+  },
+  "requirements": [
+    [
+      "ashy"
+    ]
+  ]
+}

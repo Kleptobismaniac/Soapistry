@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:smelting",
+    "group": "ash",
+    "ingredient": {
+        "item": "minecraft:leaves"
+    },
+    "result": "soapistry:ash",
+    "experience": 0.3,
+    "cookingtime": 100
+}

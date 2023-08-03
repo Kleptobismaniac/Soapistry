@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:soapistry/root",
+  "criteria": {
+    "slip_n_slide": {
+      "conditions": {
+        "effects": {
+          "soapistry:slippery": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Apply the Slippery effect to yourself for the first time"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "soapistry:soapy"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Slip and Slide"
+    }
+  },
+  "requirements": [
+    [
+      "slip_n_slide"
+    ]
+  ]
+}
