@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:soapistry/root",
   "criteria": {
-    "fatty": {
+    "lye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "soapistry:bottle_of_fat"
+              "soapistry:lye"
             ]
           }
         ]
@@ -16,23 +16,22 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Obtain a bottle of fat for the first time"
+      "text": "Create Lye for the first time"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:bottle_of_fat"
+      "item": "soapistry:lye"
     },
     "show_toast": true,
     "title": {
-      "text": "Fat of the Land"
+      "text": "Lye-ing Wait"
     }
   },
   "requirements": [
     [
-      "fatty"
+      "lye"
     ]
   ]
 }

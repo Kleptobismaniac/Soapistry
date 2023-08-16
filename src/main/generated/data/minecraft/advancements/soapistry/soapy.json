@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:soapistry/root",
   "criteria": {
-    "got_soap": {
+    "soapy": {
       "conditions": {
         "items": [
           {
             "items": [
-              "soapistry:soap"
+              "soapistry:soapy"
             ]
           }
         ]
@@ -15,23 +16,23 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Craft a bar of Soap for the first time"
+      "text": "Lather up a bar of Soap for the first time"
     },
-    "frame": "goal",
+    "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:soap"
+      "item": "soapistry:soapy",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "text": "Soap Making 101"
+      "text": "Supreme Suds"
     }
   },
   "requirements": [
     [
-      "got_soap"
+      "soapy"
     ]
   ]
 }

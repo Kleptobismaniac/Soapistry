@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:soapistry/root",
+  "parent": "minecraft:soapistry/soapy",
   "criteria": {
-    "slip_n_slide": {
+    "slippery": {
       "conditions": {
         "effects": {
           "soapistry:slippery": {}
@@ -18,7 +18,8 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:soapy"
+      "item": "soapistry:soapy",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
@@ -27,7 +28,7 @@
   },
   "requirements": [
     [
-      "slip_n_slide"
+      "slippery"
     ]
   ]
 }

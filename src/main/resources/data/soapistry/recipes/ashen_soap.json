@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "soapistry:soap"
+        },
+        {
+            "item": "soapistry:ash"
+        },
+        {
+            "item": "soapistry:ash"
+        }
+    ],
+    "result": {
+        "item": "soapistry:ashen_soap",
+        "count": 2
+    }
+}

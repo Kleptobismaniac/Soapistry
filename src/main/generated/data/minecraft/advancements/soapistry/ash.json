@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:soapistry/root",
   "criteria": {
-    "ashy": {
+    "ash": {
       "conditions": {
         "items": [
           {
@@ -16,9 +16,8 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Obtain ash for the first time"
+      "text": "Obtain Ash for the first time"
     },
     "frame": "task",
     "hidden": false,
@@ -32,7 +31,7 @@
   },
   "requirements": [
     [
-      "ashy"
+      "ash"
     ]
   ]
 }

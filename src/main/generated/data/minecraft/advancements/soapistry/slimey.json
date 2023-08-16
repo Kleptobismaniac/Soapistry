@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:soapistry/root",
   "criteria": {
-    "lye-ing": {
+    "slimey": {
       "conditions": {
         "items": [
           {
             "items": [
-              "soapistry:lye"
+              "soapistry:slimey_soap"
             ]
           }
         ]
@@ -16,23 +16,23 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Create lye for the first time"
+      "text": "Craft a bar of Slimey Soap for the first time"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:lye"
+      "item": "soapistry:slimey_soap",
+      "nbt": "{Damage:0}"
     },
     "show_toast": true,
     "title": {
-      "text": "Lye-ing Wait"
+      "text": "Slimey Substance"
     }
   },
   "requirements": [
     [
-      "lye-ing"
+      "slimey"
     ]
   ]
 }

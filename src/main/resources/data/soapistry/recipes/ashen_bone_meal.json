@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:bone_meal"
+        },
+        {
+            "item": "soapistry:ash"
+        }
+    ],
+    "result": {
+        "item": "soapistry:ashen_bone_meal",
+        "count": 2
+    }
+}

@@ -3,6 +3,7 @@ package klepto.soapistry.item;
 import klepto.soapistry.Soapistry;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,5 +15,9 @@ public class ModItemGroup {
 
     public static void addItem(Item item){
         ItemGroupEvents.modifyEntriesEvent(ModItemGroup.SOAP).register(content -> {content.add(item);});
+    }
+
+    public static void addBlock(Block block){
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.SOAP).register(content -> {content.add(block);});
     }
 }

@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "glass_bottle.GlassBottleMixin",
-    "glass_bottle.GlassBottleAccessor",
-    "timer.StuffTimer"
+    "glass_bottle.GlassBottleAccessor"
   ],
   "client": [
 

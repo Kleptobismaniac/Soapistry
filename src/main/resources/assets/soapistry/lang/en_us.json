@@ -1,11 +1,22 @@
 {
     "item.soapistry.soap": "Soap",
-    "item.soapistry.ash": "Ash",
-    "item.soapistry.lye": "Lye",
-    "item.soapistry.bottle_of_fat": "Bottle of Fat",
     "item.soapistry.soapy": "Soapy Soap",
+    "item.soapistry.ashen_soap": "Ashen Soap",
+    "item.soapistry.slimey_soap": "Slimey Soap",
+
+
+    "item.soapistry.ash": "Ash",
+    "item.soapistry.ashen_bone_meal": "Ashen Bone Meal",
+    "block.soapistry.ashen_path": "Ashen Path",
+    "block.soapistry.soaked_ashen_path": "Soaked Ashen Path",
+
+
+
+    "item.soapistry.lye": "Lye",
     
-    "block.soapistry.pan": "Frying Pan",
+    "item.soapistry.bottle_of_fat": "Bottle of Fat",
+    
+    "item.soapistry.mystical_residue": "Mystical Residue",
     
     "effect.soapistry.slippery": "Slippery",
 

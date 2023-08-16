@@ -21,7 +21,6 @@ public class SlipperyEffect extends StatusEffect{
 
     protected SlipperyEffect(StatusEffectCategory category, int color) {
         super(StatusEffectCategory.NEUTRAL, 0x00B4D8);
-        //TODO Auto-generated constructor stub
     }
     
     @Override

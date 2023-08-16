@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:soapistry/soapy",
   "criteria": {
-    "got_soap": {
+    "mystical": {
       "conditions": {
         "items": [
           {
             "items": [
-              "soapistry:soap"
+              "soapistry:mystical_residue"
             ]
           }
         ]
@@ -15,23 +16,22 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Craft a bar of Soap for the first time"
+      "text": "Obtain Mystical Residue for the first time"
     },
-    "frame": "goal",
+    "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:soap"
+      "item": "soapistry:mystical_residue"
     },
     "show_toast": true,
     "title": {
-      "text": "Soap Making 101"
+      "text": "Mystical Mastery"
     }
   },
   "requirements": [
     [
-      "got_soap"
+      "mystical"
     ]
   ]
 }

@@ -1,11 +1,12 @@
 {
+  "parent": "minecraft:soapistry/root",
   "criteria": {
-    "got_soap": {
+    "fat": {
       "conditions": {
         "items": [
           {
             "items": [
-              "soapistry:soap"
+              "soapistry:bottle_of_fat"
             ]
           }
         ]
@@ -15,23 +16,22 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
-      "text": "Craft a bar of Soap for the first time"
+      "text": "Obtain a Bottle of Fat for the first time"
     },
-    "frame": "goal",
+    "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "soapistry:soap"
+      "item": "soapistry:bottle_of_fat"
     },
     "show_toast": true,
     "title": {
-      "text": "Soap Making 101"
+      "text": "Fat of the Land"
     }
   },
   "requirements": [
     [
-      "got_soap"
+      "fat"
     ]
   ]
 }
