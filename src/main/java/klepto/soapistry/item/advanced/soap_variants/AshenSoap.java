@@ -17,6 +17,8 @@ import net.minecraft.nbt.NbtList;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Hand;
@@ -31,13 +33,13 @@ public class AshenSoap extends SoapySoap{
         super(settings);
     }
     
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    /*public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(world instanceof ServerWorld && user.getOffHandStack().isEmpty()){
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 300), (Entity)user);
             destroyItem(user.getMainHandStack(), user);
         }
         return TypedActionResult.success(user.getMainHandStack());
-    } 
+    } */
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -45,7 +47,6 @@ public class AshenSoap extends SoapySoap{
         PlayerEntity user = context.getPlayer();
         BlockPos pos = context.getBlockPos();
         BlockState blockState = world.getBlockState(pos);
-
         return ActionResult.SUCCESS;
     }
 
@@ -55,8 +56,9 @@ public class AshenSoap extends SoapySoap{
         //stack is the item thats currently held on the cursor, itemStack is the stack thats being clicked by the item
         //Ex. Holding glass bottle = stack, clicking cooked beef with glass bottle = itemStack
         ItemStack itemStack = slot.getStack();
+        World world = player.getWorld();
         server = MinecraftClient.getInstance().getServer();
-            if (clickType != ClickType.RIGHT){
+            if (clickType != ClickType.RIGHT || slot.getStack().isEmpty()){
                 return false;
             } else {
                 if (itemStack.hasEnchantments()){
@@ -65,15 +67,25 @@ public class AshenSoap extends SoapySoap{
                     
                     for (int i = 0; i < enchants.size(); i++){
                         if (enchantmentList.containsKey(Enchantments.BINDING_CURSE) || enchantmentList.containsKey(Enchantments.VANISHING_CURSE))
-                        System.out.println("THIS ENCHANTMENT EXISTS");
+                        //System.out.println("THIS ENCHANTMENT EXISTS");
                             enchantmentList.remove(Enchantments.BINDING_CURSE);
                             enchantmentList.remove(Enchantments.VANISHING_CURSE);
+                            world.playSound(player, player.getBlockPos(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.PLAYERS, 0.5f, 0.3f);
+                            world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_CHAIN_BREAK, SoundCategory.PLAYERS, 0.1f, 0.1f);
+                            world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_SCULK_BREAK, SoundCategory.PLAYERS, 0.1f, 0.1f);
+                            world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_SCULK_PLACE, SoundCategory.PLAYERS, 0.1f, 0.5f);
+                            world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_ANCIENT_DEBRIS_BREAK, SoundCategory.PLAYERS, 0.5f, 0.1f);
                         }
                         EnchantmentHelper.set(enchantmentList, itemStack);
                     }
-                    stack.decrement(1);
+                    
+                    //Change to custom sounds in Audacity
+                    
+
+                    destroyItem(stack, player, true);
+                    return true;
                 }
-        return true;
+        
     }
 
     

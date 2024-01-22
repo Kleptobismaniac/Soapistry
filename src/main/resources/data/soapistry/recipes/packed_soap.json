@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "soapistry:soap"
+        }
+    },
+    "result": {
+        "item": "soapistry:packed_soap",
+        "count": 1
+    }
+}

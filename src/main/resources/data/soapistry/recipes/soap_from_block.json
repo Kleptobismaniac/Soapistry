@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "soapistry:packed_soap"
+        }
+    ],
+    "result": {
+        "item": "soapistry:soap",
+        "count": 9
+    }
+}

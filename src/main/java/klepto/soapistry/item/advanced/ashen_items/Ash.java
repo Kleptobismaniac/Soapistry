@@ -1,6 +1,7 @@
 package klepto.soapistry.item.advanced.ashen_items;
 
-import klepto.soapistry.block.ModBlocks;
+//import klepto.soapistry.block.ModBlocks;
+import klepto.soapistry.item.ItemHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -15,13 +16,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 
-public class Ash extends Item{
+public class Ash extends ItemHandler{
 
     
     public Ash(Settings settings) {
         super(settings);
     }
-
+/*
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
         PlayerEntity user = context.getPlayer();
@@ -34,7 +35,7 @@ public class Ash extends Item{
             }
             createParticles(world, pos, 25, 1, ParticleTypes.SMOKE);
             user.getMainHandStack().decrement(1);
-        
+            
         
         
         return ActionResult.SUCCESS;
@@ -65,12 +66,5 @@ public class Ash extends Item{
             }
         }
     }
-
-    public void destroyItem(ItemStack stack){
-        if (stack.getDamage() < stack.getMaxDamage()){
-            stack.setDamage(stack.getDamage() + 1);
-        } else if (stack.getDamage() == stack.getMaxDamage()){
-            stack.decrement(1);
-        }
-    }
+*/
 }

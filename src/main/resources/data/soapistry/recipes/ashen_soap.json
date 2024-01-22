@@ -9,10 +9,13 @@
         },
         {
             "item": "soapistry:ash"
+        },
+        {
+            "item": "soapistry:mystical_residue"
         }
     ],
     "result": {
         "item": "soapistry:ashen_soap",
-        "count": 2
+        "count": 1
     }
 }

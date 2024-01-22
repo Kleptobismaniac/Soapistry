@@ -15,7 +15,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "minecraft:textures/gui/advancements/backgrounds/soapistry_background.png",
+    "background": "soapistry:textures/gui/advancements/backgrounds/soapistry_background.png",
     "description": {
       "text": "Craft a bar of Soap for the first time"
     },

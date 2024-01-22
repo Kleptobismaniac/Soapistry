@@ -1,6 +1,7 @@
 package klepto.soapistry.item.advanced;
 
-import klepto.soapistry.block.ModBlocks;
+//import klepto.soapistry.block.ModBlocks;
+import klepto.soapistry.item.ItemHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -15,13 +16,13 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class BottleOfFat extends Item{
+public class BottleOfFat extends ItemHandler{
 
     public BottleOfFat(Settings settings) {
         super(settings);
         //TODO Auto-generated constructor stub
     }
-
+/* 
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
         PlayerEntity user = context.getPlayer();
@@ -64,13 +65,5 @@ public class BottleOfFat extends Item{
             }
         }
     }
-
-    public void destroyItem(ItemStack stack){
-        if (stack.getDamage() < stack.getMaxDamage()){
-            stack.setDamage(stack.getDamage() + 1);
-        } else if (stack.getDamage() == stack.getMaxDamage()){
-            stack.decrement(1);
-        }
-    }
-    
+*/
 }

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "soapistry:packed_lye"
+        }
+    ],
+    "result": {
+        "item": "soapistry:lye",
+        "count": 9
+    }
+}

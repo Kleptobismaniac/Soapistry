@@ -1,4 +1,4 @@
-package klepto.soapistry.item.advanced.soap_variants;
+/*package klepto.soapistry.item.advanced.soap_variants;
 
 import klepto.soapistry.block.ModBlocks;
 import klepto.soapistry.status_effects.ModEffects;
@@ -26,8 +26,6 @@ public class EnchantedSoap extends SoapySoap{
     public EnchantedSoap(Settings settings) {
         super(settings);
     }
-    
-    
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -36,11 +34,7 @@ public class EnchantedSoap extends SoapySoap{
         BlockPos pos = context.getBlockPos();
         BlockState blockState = world.getBlockState(pos);
         BlockEntity blockEntity = world.getBlockEntity(pos);
-
         ItemStack itemStack = user.getMainHandStack();
-
-        
-
 
         if(blockState.getBlock().equals(Blocks.ENCHANTING_TABLE)) {
             Random random = Random.create();
@@ -76,3 +70,4 @@ public class EnchantedSoap extends SoapySoap{
 
 
 
+*/

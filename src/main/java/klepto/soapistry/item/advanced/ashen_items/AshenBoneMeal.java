@@ -1,19 +1,21 @@
 package klepto.soapistry.item.advanced.ashen_items;
 
+import klepto.soapistry.item.ItemHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.NetherWartBlock;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
-public class AshenBoneMeal extends Item{
+public class AshenBoneMeal extends ItemHandler{
 
     public AshenBoneMeal(Settings settings) {
         super(settings);
@@ -35,8 +37,12 @@ public class AshenBoneMeal extends Item{
                blockState = (BlockState)blockState.with(NetherWartBlock.AGE, i + 1);
                createParticles(world, pos, 0);
                world.setBlockState(pos, blockState, 2);
+
+               //Change to custom sounds in Audacity
+               world.playSound(user, user.getBlockPos(), SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 0.2f, 0.7f);
+               world.playSound(user, user.getBlockPos(), SoundEvents.ENTITY_FIREWORK_ROCKET_BLAST, SoundCategory.BLOCKS, 0.01f, 0.1f);
             }
-            user.getMainHandStack().decrement(1);
+            destroyItem(user.getMainHandStack(), user, false);
         }
         return ActionResult.SUCCESS;
     }

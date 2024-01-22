@@ -6,7 +6,7 @@ import klepto.soapistry.item.advanced.MysticalResidue;
 import klepto.soapistry.item.advanced.ashen_items.Ash;
 import klepto.soapistry.item.advanced.ashen_items.AshenBoneMeal;
 import klepto.soapistry.item.advanced.soap_variants.AshenSoap;
-import klepto.soapistry.item.advanced.soap_variants.EnchantedSoap;
+//import klepto.soapistry.item.advanced.soap_variants.EnchantedSoap;
 import klepto.soapistry.item.advanced.soap_variants.SlimeySoap;
 import klepto.soapistry.item.advanced.soap_variants.Soap;
 import klepto.soapistry.item.advanced.soap_variants.SoapySoap;
@@ -31,7 +31,7 @@ public class ModItems {
 
     public static final Item SLIMEY_SOAP = registerItem("slimey_soap", new SlimeySoap(new FabricItemSettings().maxDamage(DEFAULT_DURABILITY + 2)));
 
-    public static final Item ENCHANTED_SOAP = registerItem("enchanted_soap", new EnchantedSoap(new FabricItemSettings().maxDamage(DEFAULT_DURABILITY + 2)));
+    //public static final Item ENCHANTED_SOAP = registerItem("enchanted_soap", new EnchantedSoap(new FabricItemSettings().maxDamage(DEFAULT_DURABILITY + 2)));
 
     public static final Item MYSTICAL_RESIDUE = registerItem("mystical_residue", new MysticalResidue(new FabricItemSettings()));
 

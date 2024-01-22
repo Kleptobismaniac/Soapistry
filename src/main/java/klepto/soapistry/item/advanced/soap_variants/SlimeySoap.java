@@ -2,6 +2,8 @@ package klepto.soapistry.item.advanced.soap_variants;
 
 import java.util.Arrays;
 import java.util.List;
+
+import klepto.soapistry.sound.ModSounds;
 import klepto.soapistry.status_effects.ModEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,6 +21,9 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Hand;
@@ -34,13 +39,13 @@ public class SlimeySoap extends SoapySoap{
         super(settings);
     }
     
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    /*public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(world instanceof ServerWorld && user.getOffHandStack().isEmpty()){
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 300), (Entity)user);
-            destroyItem(user.getMainHandStack());
+            destroyItem(user.getMainHandStack(), user, false);
         }
         return TypedActionResult.success(user.getMainHandStack());
-    } 
+    } */
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -51,9 +56,11 @@ public class SlimeySoap extends SoapySoap{
 
         if(blockState.getBlock().equals(Blocks.PISTON)) {
             world.setBlockState(pos, Blocks.STICKY_PISTON.getStateWithProperties(blockState));
+            world.playSound(user, pos, SoundEvents.BLOCK_SLIME_BLOCK_PLACE, SoundCategory.BLOCKS);
             createParticles(world, pos, 15, 1, ParticleTypes.ITEM_SLIME);
-            destroyItem(user.getMainHandStack());
+            destroyItem(user.getMainHandStack(), user, false);
         }
+
         return ActionResult.SUCCESS;
     }
 
@@ -64,19 +71,11 @@ public class SlimeySoap extends SoapySoap{
         //Ex. Holding glass bottle = stack, clicking cooked beef with glass bottle = itemStack
         ItemStack itemStack = slot.getStack();
         server = MinecraftClient.getInstance().getServer();
-            if (clickType != ClickType.RIGHT){
+            if (clickType != ClickType.RIGHT || slot.getStack().isEmpty()){
                 return false;
             } else {
                 return true;
             }
-    }
-
-    public void destroyItem(ItemStack stack){
-        if (stack.getDamage() < stack.getMaxDamage()){
-            stack.setDamage(stack.getDamage() + 1);
-        } else if (stack.getDamage() == stack.getMaxDamage()){
-            stack.decrement(1);
-        }
     }
 }
     

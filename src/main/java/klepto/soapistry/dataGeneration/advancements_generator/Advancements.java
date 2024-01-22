@@ -171,6 +171,4 @@ public class Advancements implements Consumer<Consumer<Advancement>> {
         .criterion("ashen_alchemist", InventoryChangedCriterion.Conditions.items(ModItems.ASHEN_BONE_MEAL, ModItems.ASHEN_SOAP))
         .build(consumer, "soapistry" + "/ashen_alchemist");
     }
-
-    
 }

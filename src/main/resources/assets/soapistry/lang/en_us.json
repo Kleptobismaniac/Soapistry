@@ -7,9 +7,10 @@
 
     "item.soapistry.ash": "Ash",
     "item.soapistry.ashen_bone_meal": "Ashen Bone Meal",
-    "block.soapistry.ashen_path": "Ashen Path",
-    "block.soapistry.soaked_ashen_path": "Soaked Ashen Path",
-
+    
+    "block.soapistry.packed_soap": "Packed Soap",
+    "block.soapistry.packed_ash": "Packed Ash",
+    "block.soapistry.packed_lye": "Packed Lye",
 
 
     "item.soapistry.lye": "Lye",

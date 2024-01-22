@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "soapistry:ash"
+        }
+    },
+    "result": {
+        "item": "soapistry:packed_ash",
+        "count": 1
+    }
+}
