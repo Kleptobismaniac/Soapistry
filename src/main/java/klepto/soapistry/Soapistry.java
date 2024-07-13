@@ -4,15 +4,14 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import klepto.soapistry.block.ModBlocks;
-//import klepto.soapistry.block.ModBlocks;
-import klepto.soapistry.item.ModItems;
-import klepto.soapistry.sound.ModSounds;
-import klepto.soapistry.status_effects.ModEffects;
+import klepto.soapistry.registry.block.ModBlocks;
+import klepto.soapistry.registry.item.ModItems;
+import klepto.soapistry.registry.sound.ModSounds;
+import klepto.soapistry.registry.status_effects.ModEffects;
 
 public class Soapistry implements ModInitializer {
 	public static final String MOD_ID = "soapistry";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger SOAPISTRY = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {

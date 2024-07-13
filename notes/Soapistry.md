@@ -150,5 +150,5 @@ This tooltip shows that the tool or armor item has the Cleanliness effect, and t
 
 The effect doesn't stack depending on the amount of items that have the Cleanliness effect. The Diamond Shovel will run out first, then the Diamond Helmet.
 
-
+water in culdroun, add lye, ash, pink dye, soap
 

@@ -2,7 +2,7 @@ package klepto.soapistry.mixin.glass_bottle;
 
 import org.spongepowered.asm.mixin.Mixin;
 
-import klepto.soapistry.item.ModItems;
+import klepto.soapistry.registry.item.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.GlassBottleItem;
 import net.minecraft.item.Item;

@@ -1,8 +1,21 @@
 {
     "slimey_soap_use": {
-        "subtitle": "sounds.soapistry.slimey_soap_use",
+        "subtitle": "sound.soapistry.slimey_soap_use",
         "sounds":[
-            "soapisty:slimey_soap_use"
+            "soapistry:slimey_soap_use"
+        ]
+    }, 
+    "mystical_residue_success": {
+        "subtitle": "sound.soapistry.mystical_residue_success",
+        "sounds":[
+            "soapistry:mystical_residue_success"
+        ]
+    },
+    "mystical_residue_fail": {
+        "subtitle": "sound.soapistry.mystical_residue_fail",
+        "sounds":[
+            "soapistry:mystical_residue_fail"
         ]
     }
+
 }

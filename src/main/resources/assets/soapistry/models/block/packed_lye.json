@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-      "all": "soapistry:block/packed_lye"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "soapistry:block/packed_lye"
+  }
 }

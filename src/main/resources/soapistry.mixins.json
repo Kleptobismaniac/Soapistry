@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "glass_bottle.GlassBottleMixin",
-    "glass_bottle.GlassBottleAccessor"
+    "glass_bottle.GlassBottleAccessor",
+    "animation.HeldItemRendererMixin"
   ],
   "client": [
 
